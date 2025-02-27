@@ -39,8 +39,8 @@
         };
 
         Promise.all([
-            fetch('box_office.json').then(r => r.json()),
-            fetch('china_cities.geojson').then(r => r.json())
+            fetch('./main/box_office.json').then(r => r.json()),
+            fetch('./main/china_cities.geojson').then(r => r.json())
         ]).then(([businessData, geoData]) => {
             const processedData = processData(businessData);
             createVisualization(processedData, geoData);
