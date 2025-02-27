@@ -42,8 +42,8 @@
 
         // 异步加载数据
         Promise.all([
-            fetch('data/box_office.json').then(r => r.json()),
-            fetch('data/china_cities.geojson').then(r => r.json())
+            fetch('Data/box_office.json').then(r => r.json()),
+            fetch('Data/china_cities.geojson').then(r => r.json())
         ]).then(([businessData, geoData]) => {
             const processedData = processData(businessData);
             createVisualization(processedData, geoData);
